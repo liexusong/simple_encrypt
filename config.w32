@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("simple_encrypt", "for simple_encrypt support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("simple_encrypt", "enable simple_encrypt support", "no");
+
+if (PHP_SIMPLE_ENCRYPT != "no") {
+	EXTENSION("simple_encrypt", "simple_encrypt.c");
+}
+
