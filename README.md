@@ -15,7 +15,7 @@ Functions:
 
 example:
 --------
-```
+```php
 <?php
 
   $key = "#xls^&@)(~@!8;3x";
