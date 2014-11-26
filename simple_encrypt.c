@@ -213,7 +213,7 @@ PHP_FUNCTION(se_encrypt)
     PHP_MD5Final(digest, &context);
 
     for (i = 0; i < 8; i++) {
-        raw_key[i] = (char)digest[i * 2];
+        raw_key[i] = (char)(digest[i * 2] ^ digest[i * 2 + 1]);
     }
 
     /* How many blocks for 8 bytes */
@@ -281,7 +281,7 @@ static char *se_hexstr_decrypt(char *str, int len, int *newlen,
     PHP_MD5Final(digest, &context);
 
     for (i = 0; i < 8; i++) {
-        raw_key[i] = (char)digest[i * 2];
+        raw_key[i] = (char)(digest[i * 2] ^ digest[i * 2 + 1]);
     }
 
     count = binlen / 8; /* How many blocks with 8 bytes */
