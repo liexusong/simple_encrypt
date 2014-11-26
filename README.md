@@ -15,7 +15,7 @@ Functions:
 
 example:
 --------
-```
+<pre><code lang="php">
 <?php
 
 $key = "#xls^&@)(~@!8;3x";
@@ -29,4 +29,4 @@ $org_str = se_decrypt($enc_str, $key); // decrypt string
 echo $org_str, "\n";
 
 ?>
-```
+</code></pre>
