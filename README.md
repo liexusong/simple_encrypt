@@ -13,6 +13,19 @@ Functions:
 * $data: decrypt data.
 * $key: decrypt key.
 
+install:
+--------
+``` shell
+$ git clone https://github.com/liexusong/simple_encrypt
+$ cd simple_encrypt
+$ phpize
+$ configure --with-php-config=path-to/php-config
+$ make
+$ make install
+```
+
+modifed php.ini and add "extension = simple_encrypt.so" entry
+
 example:
 --------
 ```php
